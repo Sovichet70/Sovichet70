@@ -1,13 +1,13 @@
-package com.example.springbootdatabase;
+package com.example.springbootmysql;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootDatabaseApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootDatabaseApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }

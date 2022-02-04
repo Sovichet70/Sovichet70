@@ -1,7 +1,7 @@
-package com.example.springbootdatabase.controller;
+package com.example.springbootmysql.controller;
 
-import com.example.springbootdatabase.model.User;
-import com.example.springbootdatabase.repository.UserRepository;
+import com.example.springbootmysql.model.User;
+import com.example.springbootmysql.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -10,9 +10,9 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping(path="/user") // This means URL started with /user (after Application path)
-public class MainController {
-    @Autowired
+public class UserController {
 
+    @Autowired
     private UserRepository userRepository;
 
     @PostMapping(path = "/add") // Map ONLY POST Requests
@@ -25,7 +25,7 @@ public class MainController {
     }
 
     @GetMapping(path = "/find")
-    public @ResponseBody Optional<User> findById(@RequestParam Integer id) {
+    public @ResponseBody Optional<User> findById(@RequestParam Long id) {
         return userRepository.findById(id);
     }
 

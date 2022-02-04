@@ -1,4 +1,4 @@
-package com.example.springbootdatabase.model;
+package com.example.springbootmysql.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,18 +9,17 @@ import javax.persistence.Id;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
     private String name;
 
     private  String email;
 
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -39,4 +38,5 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }
